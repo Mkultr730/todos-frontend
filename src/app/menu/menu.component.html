@@ -1,0 +1,17 @@
+<header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div><a href="https://github.com/Mkultr730" class="navbar-brand">mkultr730</a></div>
+
+            <ul class="navbar-nav">
+                <li><a *ngIf="isUserLogged()" routerLink="/welcome/mkultr730" class="nav-link">Home</a></li>
+                <li><a *ngIf="isUserLogged()" routerLink="/todos" class="nav-link">Todos</a></li>
+            </ul>
+
+            <ul class="navbar-nav navbar-collapse justify-content-end">
+                <li><a *ngIf="!isUserLogged()" routerLink="/login" class="nav-link">Login</a></li>
+                <li><a *ngIf="isUserLogged()" routerLink="/logout" class="nav-link">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
